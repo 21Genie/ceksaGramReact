@@ -1,0 +1,92 @@
+@media (min-width: 0) and (max-width: 1023px) {
+    .container {
+        width: 600px;
+    }
+}
+
+@media (min-width: 1080px) {
+    .container {
+        width: 980px;
+    }
+}
+
+.pictures {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 188px), 188px));
+    gap: 10px;
+    margin: 0 auto;
+    padding: 0;
+    list-style-type: none;
+}
+
+.picture {
+    position: relative;
+    line-height: 0;
+    max-width: 188px;
+}
+
+.picture__img {
+    max-width: auto;
+    width: 100%;
+    height: auto;
+}
+
+.picture__info {
+    display: none;
+    margin: 0;
+    padding: 15px;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    transform: translateX(-50%);
+}
+
+.picture:hover .picture__info {
+    display: flex;
+}
+
+.picture__comments {
+    margin-right: 10px;
+}
+
+.picture__comments,
+.picture__likes {
+    padding-left: 30px;
+    position: relative;
+    font-family: "Open Sans", "Arial", sans-serif;
+    font-weight: 400;
+    color: #ffffff;
+}
+
+.picture__comments,
+.picture__likes {
+    padding-left: 30px;
+    position: relative;
+    font-family: "Open Sans", "Arial", sans-serif;
+    font-weight: 400;
+    color: #ffffff;
+}
+
+.picture__comments::before {
+    width: 20px;
+    height: 16px;
+    background-position: -5px -5px;
+}
+
+.picture__likes::before {
+    width: 20px;
+    height: 16px;
+    background-position: -5px -31px;
+}
+
+.picture__comments::before,
+.picture__likes::before {
+    content: "";
+    position: absolute;
+    left: 5px;
+    top: -7px;
+    background-image: url(/img/sprite.png);
+    background-repeat: no-repeat;
+}

@@ -1,6 +1,7 @@
 import { useState } from 'react';
-import styles from './Filter.module.css';
 import { clsx } from 'clsx';
+
+import styles from './Filter.module.css';
 
 export const Filter = () => {
     const [active, setActive] = useState(1)
