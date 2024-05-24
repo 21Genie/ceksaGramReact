@@ -7,7 +7,7 @@ export const Form = () => {
         <form className={style.img_upload__form} id="upload-select-image" method="post" action="https://31.javascript.htmlacademy.pro/kekstagram" encType="multipart/form-data" autoComplete="off" noValidate>
 
             <fieldset className={style.img_upload__start}>
-                <input type="file" id="upload-file" className={style.visually__hidden} name="filename" required="" accept="image/*" />
+                <input type="file" id="upload-file" className={style.visually__hidden} name="filename" accept="image/*" />
                 <label htmlFor="upload-file" className={style.img_upload__label}>Загрузить</label>
             </fieldset>
 
@@ -18,7 +18,7 @@ export const Form = () => {
 
                         <fieldset className={clsx(style.img_upload__scale, style.scale)}>
                             <button type="button" className={clsx(style.scale__control, style.scale__control__smaller)}>Уменьшить</button>
-                            <input type="text" className={clsx(style.scale__control, style.scale__control__value)} value="100%" title="Image Scale" name="scale" readOnly="" />
+                            <input type="text" className={clsx(style.scale__control, style.scale__control__value)} value="100%" title="Image Scale" name="scale" />
                             <button type="button" className={clsx(style.scale__control, style.scale__control__bigger)}>Увеличить</button>
                         </fieldset>
 
@@ -29,7 +29,7 @@ export const Form = () => {
 
 
                         <fieldset className={clsx(style.img_upload__effect_level, style.effect_level, style.hidden)}>
-                            <input className={style.effect_level__value} type="number" step="any" name="effect-level" value="" />
+                            <input className={style.effect_level__value} type="number" step="any" name="effect-level" />
                             <div className={[clsx(style.effect_level__slider, style.noUi_target, style.noUi_ltr, style.noUi_horizontal, style.noUi_txt_dir_ltr)]}>
                                 <div className={[style.noUi_base]}><div className="noUi-connects">
                                     <div className={[style.noUi_connect]} style={{ transform: 'translate(0%, 0px) scale(0.1, 1)' }}>
@@ -52,44 +52,44 @@ export const Form = () => {
                     <fieldset className={clsx(style.img_upload__effects, style.effects)}>
                         <ul className={style.effects__list}>
                             <li className={style.effects__item}>
-                                <input type="radio" className="effects__radio  visually-hidden" name="effect" id="effect-none" value="none" checked="" />
-                                <label htmlFor="effect-none" className="effects__label">
-                                    <span className="effects__preview  effects__preview--none">Превью фото без эффекта</span>
+                                <input type="radio" className={clsx(style.effects__radio, style.visually_hidden)} name="effect" id="effect-none" />
+                                <label htmlFor="effect-none" className={style.effects__label}>
+                                    <span className={clsx(style.effects__preview, style.effects__preview__none)}>Превью фото без эффекта</span>
                                     Оригинал
                                 </label>
                             </li>
                             <li className={style.effects__item}>
-                                <input type="radio" className="effects__radio  visually-hidden" name="effect" id="effect-chrome" value="chrome" />
-                                <label htmlFor="effect-chrome" className="effects__label">
-                                    <span className="effects__preview  effects__preview--chrome">Превью эффекта Хром</span>
+                                <input type="radio" className={clsx(style.effects__radio, style.visually_hidden)} name="effect" id="effect-chrome" value="chrome" />
+                                <label htmlFor="effect-chrome" className={style.effects__label}>
+                                    <span className={clsx(style.effects__preview, style.effects__preview__chrome)}>Превью эффекта Хром</span>
                                     Хром
                                 </label>
                             </li>
                             <li className={style.effects__item}>
-                                <input type="radio" className="effects__radio  visually-hidden" name="effect" id="effect-sepia" value="sepia" />
-                                <label htmlFor="effect-sepia" className="effects__label">
-                                    <span className="effects__preview  effects__preview--sepia">Превью эффекта Сепия</span>
+                                <input type="radio" className={clsx(style.effects__radio, style.visually_hidden)} name="effect" id="effect-sepia" value="sepia" />
+                                <label htmlFor="effect-sepia" className={style.effects__label}>
+                                    <span className={clsx(style.effects__preview, style.effects__preview__sepia)}>Превью эффекта Сепия</span>
                                     Сепия
                                 </label>
                             </li>
                             <li className={style.effects__item}>
-                                <input type="radio" className="effects__radio  visually-hidden" name="effect" id="effect-marvin" value="marvin" />
-                                <label htmlFor="effect-marvin" className="effects__label">
-                                    <span className="effects__preview  effects__preview--marvin">Превью эффекта Марвин</span>
+                                <input type="radio" className={clsx(style.effects__radio, style.visually_hidden)} name="effect" id="effect-marvin" value="marvin" />
+                                <label htmlFor="effect-marvin" className={style.effects__label}>
+                                    <span className={clsx(style.effects__preview, style.effects__preview__marvin)}>Превью эффекта Марвин</span>
                                     Марвин
                                 </label>
                             </li>
                             <li className={style.effects__item}>
-                                <input type="radio" className="effects__radio  visually-hidden" name="effect" id="effect-phobos" value="phobos" />
-                                <label htmlFor="effect-phobos" className="effects__label">
-                                    <span className="effects__preview  effects__preview--phobos">Превью эффекта Фобос</span>
+                                <input type="radio" className={clsx(style.effects__radio, style.visually_hidden)} name="effect" id="effect-phobos" value="phobos" />
+                                <label htmlFor="effect-phobos" className={style.effects__label}>
+                                    <span className={clsx(style.effects__preview, style.effects__preview__phobos)}>Превью эффекта Фобос</span>
                                     Фобос
                                 </label>
                             </li>
                             <li className={style.effects__item}>
-                                <input type="radio" className="effects__radio  visually-hidden" name="effect" id="effect-heat" value="heat" />
-                                <label htmlFor="effect-heat" className="effects__label">
-                                    <span className="effects__preview  effects__preview--heat">Превью эффекта Зной</span>
+                                <input type="radio" className={clsx(style.effects__radio, style.visually_hidden)} name="effect" id="effect-heat" value="heat" />
+                                <label htmlFor="effect-heat" className={style.effects__label}>
+                                    <span className={clsx(style.effects__preview, style.effects__preview__heat)}>Превью эффекта Зной</span>
                                     Зной
                                 </label>
                             </li>
@@ -98,7 +98,7 @@ export const Form = () => {
 
                     <fieldset className={clsx(style.img_upload__text, style.text)}>
                         <div className={style.img_upload__field_wrapper}>
-                            <input className={style.text__hashtags} name="hashtags" placeholder="#ХэшТег" />
+                            <input className={style.text__hashtags} type='text' name="hashtags" placeholder="#ХэшТег" />
                         </div>
                         <div className={style.img_upload__field_wrapper}>
                             <textarea className={style.text__description} name="description" placeholder="Ваш комментарий..."></textarea>
