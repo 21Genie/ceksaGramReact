@@ -7,7 +7,7 @@ export const Comments = ({ comments }) => {
 
     return (
         <>
-            {comments.length > 5 && (
+            {comments.length > 5 ?
                 <>
                     <div className={style.social__comment_count}>
                         <span className={style.social__comment_shown_count}>{Math.min(5 * count, comments.length)} </span>
@@ -29,7 +29,16 @@ export const Comments = ({ comments }) => {
 
                     </ul>
                 </>
-            )
+
+                : <ul className={style.social__comments}>
+
+                    {comments.slice(0, count * 5).map(post =>
+                        <li className={style.social__comment} key={post.id}>
+                            <img className={style.social__picture} src={`../../../../${post.avatar}`} alt="Харитон" width="35" height="35" />
+                            <p className={style.social__text}>{post.message}</p>
+                        </li>
+                    )}
+                </ul>
             }
         </>
     )
