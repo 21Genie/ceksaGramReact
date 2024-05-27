@@ -1,7 +1,7 @@
-import { useContext, useState } from 'react';
+import { useState, useContext } from 'react';
 import { clsx } from 'clsx';
 
-import { PostsContext } from '../../context/postsContext'
+import { PostsContext } from '../../../../context/postsContext'
 
 import styles from './Filter.module.css';
 

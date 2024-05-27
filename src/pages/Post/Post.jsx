@@ -1,12 +1,16 @@
+import { useContext } from 'react';
 import { useParams } from 'react-router-dom';
 import { clsx } from 'clsx';
-import style from './Post.module.css'
-
 import { Link } from 'react-router-dom';
 
+import style from './Post.module.css'
+
+import { PostsContext } from '../../context/postsContext'
 import { Comments } from '../../components/Comments/Comments'
 
-export const Post = ({ posts }) => {
+export const Post = () => {
+    const { posts } = useContext(PostsContext)
+
     const { id } = useParams()
     const { likes, url, comments, description } = posts.find(post => post.id === Number(id))
 
