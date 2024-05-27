@@ -62,7 +62,7 @@ git commit -m "Initial commit"
 Install dependencies:
 
 ```
-npm i
+npm install
 ```
 
 Now, you can start a local web server by running:
