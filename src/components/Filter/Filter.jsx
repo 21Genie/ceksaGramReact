@@ -1,7 +1,8 @@
-import { useContext, useState } from 'react';
+import { useContext, useMemo, useState } from 'react';
 import { clsx } from 'clsx';
 
 import { PostsContext } from '../../context/postsContext'
+import { debounce } from 'throttle-debounce'
 
 import styles from './Filter.module.css';
 
@@ -10,10 +11,10 @@ export const Filter = () => {
 
     const [active, setActive] = useState(1)
 
-    const handleBtnClick = (evt, cb) => {
+    const handleBtnClick = debounce(200, (evt, cb) => {
         setActive(Number(evt.target.id))
         cb()
-    }
+    })
 
     const sortByDefault = () => {
         setPosts(prevPosts => [...prevPosts].sort((a, b) => a.id - b.id))
